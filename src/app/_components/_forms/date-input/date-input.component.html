@@ -1,0 +1,23 @@
+<form class="row row-cols-sm-auto">
+	<div class="col-12">
+		<div class="input-group">
+			@if ("label") {
+				<label class="form-label">{{ label }}</label>
+			}
+		
+			<input
+				class="form-control"
+				placeholder={{placeholder}}
+				name="dp"
+				[(ngModel)]="model"
+				ngbDatepicker
+				#d="ngbDatepicker"
+			/>
+			<button class="btn btn-outline-secondary bi bi-calendar3 bi bi-calendar" (click)="d.toggle()" type="button"></button>
+
+		</div>
+	
+	</div>
+
+</form>
+
