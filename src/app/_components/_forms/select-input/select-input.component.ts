@@ -1,6 +1,5 @@
 import { Component, Input, Self } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
-import exp from 'constants';
 
 @Component({
     selector: 'app-select-input',
@@ -12,6 +11,7 @@ export class SelectInputComponent implements ControlValueAccessor {
     @Input() defaultOption: string = '';
     @Input() options: string[] = [];
     @Input() values: any[] = [];
+    @Input() formControl: any;
 
     constructor(@Self() public controlDir: NgControl) {
         this.controlDir.valueAccessor = this;
