@@ -7,15 +7,22 @@ import { SharedModule } from './_modules/shared.module';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+//Components
+import { HomeComponent } from './_components/home/home.component';
 import { LoginComponent } from './_components/account/login/login.component';
+import { RegisterComponent } from './_components/account/register/register.component';
 import { TextInputComponent } from './_components/_forms/text-input/text-input.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
+import { FooterComponent } from './_components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    FooterComponent,
+    HomeComponent,
     LoginComponent,
+    RegisterComponent,
     TextInputComponent
   ],
   imports: [

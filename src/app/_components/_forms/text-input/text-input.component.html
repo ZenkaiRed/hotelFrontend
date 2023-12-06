@@ -3,7 +3,7 @@
         *ngIf="label"
         class="form-label"
     >
-        {{ label }}
+        {{ label }}:
     </label>
 
     <div class="input-group">
@@ -17,9 +17,9 @@
         <input
             type="{{ type }}"
             class="form-control"
-            [class.is-invalid]="control.errors && control.dirty && control.touched"
+            [class.is-invalid]="control.touched && control.invalid && control.dirty"
             [formControl]="control"
-            placeholder = {{ placeholder }}
+            placeholder = "{{placeholder}}"
         >
 
         <!--Error messages-->

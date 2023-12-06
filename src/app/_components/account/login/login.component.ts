@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
     login(): void {
         this.accountService.login(this.loginForm.value).subscribe({
             next: () => {
-                this.router.navigateByUrl("/home");
+                this.router.navigateByUrl("/");
             },
             error: (error) => {
                 this.notification = {
